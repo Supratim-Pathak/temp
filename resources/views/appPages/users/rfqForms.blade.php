@@ -15,19 +15,19 @@
                     <div class="col-sm-6 col-md-6">
                         <div class="form-group">
                             <label class="form-label">Requisition ID <span class="text-red">*</span></label>
-                            <input type="text" class="form-control" name="req_id" placeholder="Requisition ID" readonly>
+                            <input type="text" class="form-control" name="req_id" value="{{ $reqId }}" placeholder="Requisition ID" readonly required>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6">
                         <div class="form-group">
                             <label class="form-label">Requisition Date <span class="text-red">*</span></label>
-                            <input type="date" class="form-control" name="req_date" placeholder="Requisition Date">
+                            <input type="date" class="form-control" name="req_date" placeholder="Requisition Date" required>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6">
                         <div class="form-group">
-                            <label class="form-label">Requisition Type</label>
-                            <select class="form-control select2-show-search" name="req_type" data-placeholder="Choose one (with searchbox)">
+                            <label class="form-label">Requisition Type <span class="text-red">*</span></label>
+                            <select class="form-control select2-show-search" name="req_type" data-placeholder="Choose one (with searchbox)" required>
                                 <optgroup label="Select Requisition Type">
                                     <option value="RFI">RFI</option>
                                     <option value="RFP">RFP</option>
@@ -56,31 +56,31 @@
                     <div class="col-sm-6 col-md-6">
                         <div class="form-group">
                             <label class="form-label">Requisition No. <span class="text-red">*</span></label>
-                            <input type="text" class="form-control" name="req_no" placeholder="Requisition No. ">
+                            <input type="text" class="form-control" name="req_no" placeholder="Requisition No. " required>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6">
                         <div class="form-group">
                             <label class="form-label">Requisition Title <span class="text-red">*</span></label>
-                            <input type="text" class="form-control" name="req_title" placeholder="Requisition title">
+                            <input type="text" class="form-control" name="req_title" placeholder="Requisition title" required>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6">
                         <div class="form-group">
-                            <label class="form-label">Requisition Subject <span class="text-red">*</span></label>
+                            <label class="form-label">Requisition Subject </label>
                             <input type="text" name="req_subject" class="form-control" placeholder="Requisition Subject">
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-12">
                         <div class="form-group">
-                            <label class="form-label">Requisition Description <span class="text-red">*</span></label>
-                            <textarea type="text" id="" name="req_desc" class="form-control" placeholder="Requisition Description"></textarea>
+                            <label class="form-label">Requisition Description </label>
+                            <textarea type="text" id="" name="req_desc" class="form-control" placeholder="Requisition Description" required></textarea>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6">
                         <div class="form-group">
-                            <label class="form-label">Requisition For</label>
-                            <select class="form-control select2-show-search" name="req_for" data-placeholder="Choose one (with searchbox)">
+                            <label class="form-label">Requisition For <span class="text-red">*</span></label>
+                            <select class="form-control select2-show-search" name="req_for" data-placeholder="Choose one (with searchbox)" required>
                                 <optgroup label="Select Requisition Type">
                                     <option value="C">Consumeable</option>
                                     <option value="F">Fixed</option>
@@ -90,8 +90,8 @@
                     </div>
                     <div class="col-sm-6 col-md-6">
                         <div class="form-group">
-                            <label class="form-label">Solicitation Type</label>
-                            <select class="form-control select2-show-search" name="sol_type" data-placeholder="Choose one (with searchbox)">
+                            <label class="form-label">Solicitation Type <span class="text-red">*</span></label>
+                            <select class="form-control select2-show-search" name="sol_type" data-placeholder="Choose one (with searchbox)" required>
                                 <optgroup label="Select Requisition Type">
                                     <option value="M">Meterial</option>
                                     <option value="P">Product</option>
@@ -121,13 +121,13 @@
                     <div class="col-sm-4 col-md-4">
                         <div class="form-group">
                             <label class="form-label">Project for <span class="text-red">*</span></label>
-                            <input type="text" class="form-control" name="project_for" placeholder="Project For" value="" >
+                            <input type="text" class="form-control" name="project_for" placeholder="Project For" value="" required>
                         </div>
                     </div>
                     <div class="col-sm-4 col-md-4">
                         <div class="form-group">
-                            <label class="form-label">Bid Type</label>
-                            <select class="form-control select2-show-search" name="bid_type" data-placeholder="Choose one (with searchbox)">
+                            <label class="form-label">Bid Type <span class="text-red">*</span></label>
+                            <select class="form-control select2-show-search" name="bid_type" data-placeholder="Choose one (with searchbox)" required>
                                 <optgroup label="Select Requisition Type">
                                     <option value="OPEN">Open</option>
                                     <option value="LIMITED">Limited</option>
@@ -163,37 +163,37 @@
                                     <td>
                                         <div class="form-group">
                                             <label class="form-label">Item <span class="text-red">*</span></label>
-                                            <input type="text" class="form-control" name="data[]" placeholder="Item" value="" >
+                                            <input type="text" class="form-control" name="data[0][item]" placeholder="Item" value="" required>
                                         </div>
                                     </td>
                                     <td>
                                         <div class="form-group">
                                             <label class="form-label">Specification <span class="text-red">*</span></label>
-                                            <input type="text" class="form-control" name="data[]" placeholder="Specification" value="" >
+                                            <input type="text" class="form-control" name="data[0][spec]" placeholder="Specification" value="" required>
                                         </div>
                                     </td>
                                     <td>
                                         <div class="form-group">
                                             <label class="form-label">Oty <span class="text-red">*</span></label>
-                                            <input type="text" class="form-control" name="data[]" placeholder="Oty" value="" >
+                                            <input type="text" class="form-control" name="data[0][oty]" placeholder="Oty" value="" required>
                                         </div>
                                     </td>
                                     <td>
                                         <div class="form-group">
                                             <label class="form-label">UOM <span class="text-red">*</span></label>
-                                            <input type="text" class="form-control" name="data[]" placeholder="UOM" value="" >
+                                            <input type="text" class="form-control" name="data[0][umo]" placeholder="UOM" value="" required>
                                         </div>
                                     </td>
                                     <td>
                                         <div class="form-group">
                                             <label class="form-label">Delivered Within <span class="text-red">*</span></label>
-                                            <input type="date" class="form-control" name="data[]" placeholder="Delivered Within" value="" >
+                                            <input type="date" class="form-control" name="data[0][delivered_within]" placeholder="Delivered Within" value="" required>
                                         </div>
                                     </td>
                                     <td>
                                         <div class="form-group">
                                             <label class="form-label">Remarks <span class="text-red">*</span></label>
-                                            <input type="text" class="form-control" name="data[]" placeholder="Remarks" value="" >
+                                            <input type="text" class="form-control" name="data[0][remark]" placeholder="Remarks" value="" required>
                                         </div>
                                     </td>
                                 </tr>
@@ -222,7 +222,7 @@
     var i = 1;
     function duplicate(){
         var html = "";
-        html = '<tr id="row'+i+'"><td><div class="form-group"><label class="form-label">Item <span class="text-red">*</span></label><input type="text"  name="data[]" class="form-control" placeholder="Item" value="" ></div></td><td><div class="form-group"><label class="form-label">Specification <span class="text-red">*</span></label><input type="text"  name="data[]" class="form-control" placeholder="Specification" value="" ></div></td> <td><div class="form-group"><label class="form-label">Oty <span class="text-red">*</span></label><input type="text"  name="data[]" class="form-control" placeholder="Oty" value=""></div></td><td><div class="form-group"><label class="form-label">UOM<span class="text-red">*</span></label><input type="text"  name="data[]" class="form-control" placeholder="UOM" value=""></div></td><td><div class="form-group"><label class="form-label">Delivered Within<span class="text-red">*</span></label><input type="date"  name="data[]" class="form-control" placeholder="Delivered Within" value=""></div></td><td><div class="form-group"><label class="form-label">Remarks <span class="text-red">*</span></label><input type="text"  name="data[]" class="form-control" placeholder="Remarks" value=""></div></td><td><button class="btn btn-danger" onclick="cancel('+i+')">cancel</button></td></tr>';
+        html = '<tr id="row'+i+'"><td><div class="form-group"><label class="form-label">Item <span class="text-red"></span></label><input type="text"  name="data['+i+'][item]" class="form-control" placeholder="Item" value="" ></div></td><td><div class="form-group"><label class="form-label">Specification <span class="text-red"></span></label><input type="text"  name="data['+i+'][spec]" class="form-control" placeholder="Specification" value="" ></div></td> <td><div class="form-group"><label class="form-label">Oty <span class="text-red"></span></label><input type="text"  name="data['+i+'][oty]" class="form-control" placeholder="Oty" value=""></div></td><td><div class="form-group"><label class="form-label">UOM<span class="text-red"></span></label><input type="text"  name="data['+i+'][umo]" class="form-control" placeholder="UOM" value=""></div></td><td><div class="form-group"><label class="form-label">Delivered Within<span class="text-red"></span></label><input type="date"  name="data['+i+'][delivered_within]" class="form-control" placeholder="Delivered Within" value=""></div></td><td><div class="form-group"><label class="form-label">Remarks <span class="text-red"></span></label><input type="text"  name="data['+i+'][remark]" class="form-control" placeholder="Remarks" value=""></div></td><td><button class="btn btn-danger" onclick="cancel('+i+')">cancel</button></td></tr>';
 
         $('#my_table').append(html);
         i++;

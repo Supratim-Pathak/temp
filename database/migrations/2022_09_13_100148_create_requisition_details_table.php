@@ -28,7 +28,7 @@ class CreateRequisitionDetailsTable extends Migration
             $table->string('requesting_department');
             $table->string('requester');
             $table->string('project_for');
-            $table->enum('bid_type',['M','P','S']);
+            $table->enum('bid_type',['OPEN','LIMITED']);
             $table->string('suporting_document');
             $table->timestamps();
         });
