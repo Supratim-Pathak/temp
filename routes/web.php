@@ -124,5 +124,7 @@ Route::group(['middleware' => ['permission:edit permission']], function () {
 });
 
 //RFQ FORM RELATED ROUTES
+Route::get('/Rfqlist',[RfqFormController::class, 'Rfqlist'])->name('Rfqlist');
+
 Route::get('/RfqForm',[RfqFormController::class, 'RfqForm'])->name('RfqForm');
 Route::post('/RfqFormAction',[RfqFormController::class, 'RfqFormAction'])->name('RfqFormAction');

@@ -16,6 +16,11 @@ class RfqFormController extends Controller
         return view('appPages.users.rfqForms' ,compact('reqId'));
     }
     
+    public function Rfqlist()
+    {
+        return view('appPages.users.reqList');
+    }
+    
     public function RfqFormAction(Request $request)
     {
     

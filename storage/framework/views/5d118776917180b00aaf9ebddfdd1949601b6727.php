@@ -204,6 +204,7 @@
                             <span class="side-menu__label">Create From</span><i class="angle fa fa-angle-right"></i></a>
                         <ul class="slide-menu ">
                             <li><a href="<?php echo e(route('RfqForm')); ?>" class="slide-item">Requisition Form</a></li>
+                            <li><a href="<?php echo e(route('Rfqlist')); ?>" class="slide-item">Requisition List</a></li>
                         </ul>
                     </li>   
 					<!-- WALLET END-->
