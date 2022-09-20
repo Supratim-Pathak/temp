@@ -122,34 +122,11 @@
                                 class="avatar-xl rounded-circle mb-1">
                         </div>
                         <div class="user-info">
-                            <h5 class=" mb-1">Jessica <i class="ion-checkmark-circled  text-success fs-12"></i></h5>
-                            <span class="text-muted app-sidebar__user-name text-sm">Web Designer</span>
+                            <h5 class=" mb-1">Usha Martin <i class="ion-checkmark-circled  text-success fs-12"></i></h5>
+                            
                         </div>
                     </div>
-                    <div class="sidebar-navs">
-                        <ul class="nav nav-pills-circle">
-                            <li class="nav-item" data-placement="top" data-toggle="tooltip" title="Support">
-                                <a class="icon" href="index-2.html#">
-                                    <i class="las la-life-ring header-icons"></i>
-                                </a>
-                            </li>
-                            <li class="nav-item" data-placement="top" data-toggle="tooltip" title="Documentation">
-                                <a class="icon" href="index-2.html#">
-                                    <i class="las  la-file-alt header-icons"></i>
-                                </a>
-                            </li>
-                            <li class="nav-item" data-placement="top" data-toggle="tooltip" title="Projects">
-                                <a href="index-2.html#" class="icon">
-                                    <i class="las la-project-diagram header-icons"></i>
-                                </a>
-                            </li>
-                            <li class="nav-item" data-placement="top" data-toggle="tooltip" title="Settins">
-                                <a class="icon" href="index-2.html#">
-                                    <i class="las la-cog header-icons"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                    
                 </div>
                 <ul class="side-menu app-sidebar3">
 					<!-- DASHBOARD -->
@@ -331,7 +308,7 @@
                                         </svg>
                                     </a>
                                 </div>
-                                <div class="mt-1">
+                                <!--<div class="mt-1">
                                     <form class="form-inline">
                                         <div class="search-element">
                                             <input type="search" class="form-control header-search"
@@ -347,7 +324,7 @@
                                             </button>
                                         </div>
                                     </form>
-                                </div><!-- SEARCH -->
+                                </div>--><!-- SEARCH -->
                                 <div class="d-flex order-lg-2 ml-auto">
                                     <a href="index-2.html#" data-toggle="search"
                                         class="nav-link nav-link-lg d-md-none navsearch">
@@ -569,8 +546,8 @@
                                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow animated">
                                             <div class="text-center">
                                                 <a href="index-2.html#"
-                                                    class="dropdown-item text-center user pb-0 font-weight-bold">Jessica</a>
-                                                <span class="text-center user-semi-title">Web Designer</span>
+                                                    class="dropdown-item text-center user pb-0 font-weight-bold">Usha Martin</a>
+                                                
                                                 <div class="dropdown-divider"></div>
                                             </div>
                                             <a class="dropdown-item d-flex" href="index-2.html#">

@@ -90,12 +90,20 @@
                             <input type="text" class="form-control" name="initiated_by" placeholder="Initiated By" id="initiated_by" value="<?php echo e(Auth::user()->name); ?>" readonly>
                         </div>
                     </div>
+                    
+
                     <div class="col-sm-6 col-md-6">
                         <div class="form-group">
                             <label class="form-label">Requesting Department <span class="text-red">*</span></label>
-                            <input type="text" class="form-control" name="requesting_department" placeholder="Requesting Department" value="Accounts" readonly>
+                            <select class="form-control select2-show-search" name="requesting_department" data-placeholder="Choose one (with searchbox)" required>
+                                <optgroup label="Select Requisition Type">
+                                    <option value="Accounts">Accounts</option>
+                                    <option value="Accounts">Admin</option>
+                                </optgroup>
+                            </select>
                         </div>
                     </div>
+
                     <div class="col-sm-4 col-md-4">
                         <div class="form-group">
                             <label class="form-label">Requester <span class="text-red">*</span></label>
@@ -122,7 +130,7 @@
                     
                     <!-- MULTI FILE UPLOAD  -->
                     <div class="col-sm-12 col-md-12 mt-4 mb-4">
-                        <label class="form-label">Suporting Document</label>
+                        <label class="form-label">supporting Document</label>
                         <div class="input-group file-browser mb-5">
                             <input type="text" class="form-control border-right-0 browse-file" placeholder="choose" readonly="" >
                             <label class="input-group-btn">
@@ -158,8 +166,8 @@
                                     </td>
                                     <td>
                                         <div class="form-group">
-                                            <label class="form-label">Oty <span class="text-red">*</span></label>
-                                            <input type="text" class="form-control" name="data[0][oty]" placeholder="Oty" value="" required>
+                                            <label class="form-label">Qty <span class="text-red">*</span></label>
+                                            <input type="text" class="form-control" name="data[0][oty]" placeholder="Qty" value="" required>
                                         </div>
                                     </td>
                                     <td>
@@ -206,7 +214,7 @@
     var i = 1;
     function duplicate(){
         var html = "";
-        html = '<tr id="row'+i+'"><td><div class="form-group"><label class="form-label">Item <span class="text-red"></span></label><input type="text"  name="data['+i+'][item]" class="form-control" placeholder="Item" value="" ></div></td><td><div class="form-group"><label class="form-label">Specification <span class="text-red"></span></label><input type="text"  name="data['+i+'][spec]" class="form-control" placeholder="Specification" value="" ></div></td> <td><div class="form-group"><label class="form-label">Oty <span class="text-red"></span></label><input type="text"  name="data['+i+'][oty]" class="form-control" placeholder="Oty" value=""></div></td><td><div class="form-group"><label class="form-label">UOM<span class="text-red"></span></label><input type="text"  name="data['+i+'][umo]" class="form-control" placeholder="UOM" value=""></div></td><td><div class="form-group"><label class="form-label">Delivered Within<span class="text-red"></span></label><input type="date"  name="data['+i+'][delivered_within]" class="form-control" placeholder="Delivered Within" value=""></div></td><td><div class="form-group"><label class="form-label">Remarks <span class="text-red"></span></label><input type="text"  name="data['+i+'][remark]" class="form-control" placeholder="Remarks" value=""></div></td><td><button class="btn btn-danger" onclick="cancel('+i+')">cancel</button></td></tr>';
+        html = '<tr id="row'+i+'"><td><div class="form-group"><label class="form-label"> <span class="text-red"></span></label><input type="text"  name="data['+i+'][item]" class="form-control" placeholder="Item" value="" ></div></td><td><div class="form-group"><label class="form-label"><span class="text-red"></span></label><input type="text"  name="data['+i+'][spec]" class="form-control" placeholder="Specification" value="" ></div></td> <td><div class="form-group"><label class="form-label"><span class="text-red"></span></label><input type="text"  name="data['+i+'][oty]" class="form-control" placeholder="Oty" value=""></div></td><td><div class="form-group"><label class="form-label"><span class="text-red"></span></label><input type="text"  name="data['+i+'][umo]" class="form-control" placeholder="UOM" value=""></div></td><td><div class="form-group"><label class="form-label"><span class="text-red"></span></label><input type="date"  name="data['+i+'][delivered_within]" class="form-control" placeholder="Delivered Within" value=""></div></td><td><div class="form-group"><label class="form-label"><span class="text-red"></span></label><input type="text"  name="data['+i+'][remark]" class="form-control" placeholder="Remarks" value=""></div></td><td><button class="btn btn-danger" onclick="cancel('+i+')">cancel</button></td></tr>';
 
         $('#my_table').append(html);
         i++;

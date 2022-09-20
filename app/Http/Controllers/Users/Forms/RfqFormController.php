@@ -17,8 +17,9 @@ class RfqFormController extends Controller
     }
     
     public function Rfqlist()
-    {
-        return view('appPages.users.reqList');
+    {   
+        $data = requisition_details::all();
+        return view('appPages.users.reqList', compact('data'));
     }
     
     public function RfqFormAction(Request $request)
